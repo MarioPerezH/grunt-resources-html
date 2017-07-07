@@ -1,0 +1,32 @@
+{
+  "name": "grunt-resources-html",
+  "version": "0.0.1",
+  "description": "Extract the resources from a html file (script-css) and deposit to a destination folder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarioPerezH/grunt-resources-html.git"
+  },
+  "author": {
+    "name": "Mario Pérez H <mario.perez.h@hotmail.com>",
+    "email": "mario.perez.h@hotmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/MarioPerezH/grunt-resources-html/issues"
+  },
+  "homepage": "https://github.com/MarioPerezH/grunt-resources-html#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-nodeunit": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-exec": "^2.0.0",
+    "load-grunt-tasks": "^3.5.2",
+    "tsc": "^1.20150623.0"
+  },
+  "dependencies": {}
+}
