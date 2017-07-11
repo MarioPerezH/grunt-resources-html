@@ -1,6 +1,5 @@
-node_modules
-node_modules/.bin
+node_modules/
 npm-debug.log
 
 #exclude result
-test/resources-dest
+test/resources-dest/
