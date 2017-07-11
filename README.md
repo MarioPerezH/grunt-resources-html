@@ -58,7 +58,7 @@ grunt.initConfig({
       },
       dist: {
         src: ['test/index.html'],
-        dest: 'test/resources/'
+        dest: 'test/resources-des/'
       }
     }
 });
