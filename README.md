@@ -16,7 +16,7 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-resources-html');
 ```
 
-## The "resources" task
+## The "resources_html" task
 
 ### Overview
 In your project's Gruntfile, add a section named `resources_html` to the data object passed into `grunt.initConfig()`.
@@ -33,7 +33,22 @@ grunt.initConfig({
 ### Usage Examples
 
 #### Default Options
-In this example, resources are extracted from src to copied to dest
+In this example, resources are extracted from src to copied to dest.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>    
+    <link href="test/resources-origin/bootstrap.min.css" rel="stylesheet" />
+    <script src="test/resources-origin/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+   
+</body>
+</html>
+```
+
+#### task grunt_resources_html
 
 ```js
 grunt.initConfig({
@@ -48,3 +63,27 @@ grunt.initConfig({
     }
 });
 ```
+#### run task grunt_resources_html result
+
+```shell
+├── gruntfile.js
+└── test
+    └── resources-dest
+        └── bootstrap.min.css
+        └── jquery-1.11.3.min.js
+```
+
+### Compile Typescript
+To compile changes made to the TS source file, you must run the grunt exec task
+
+```js
+grunt exec
+```
+
+Or execute the key combination ctrl + shift + B
+
+## Contributing
+In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+
+## Release History
+_(Nothing yet)_
