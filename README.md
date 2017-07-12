@@ -16,14 +16,14 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-resources-html');
 ```
 
-## The "resources_html" task
+## The "grunt_resources_html" task
 
 ### Overview
-In your project's Gruntfile, add a section named `resources_html` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `grunt_resources_html` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-  resources_html: {
+  grunt_resources_html: {
     your_target: {
       // Target-specific file lists and/or options go here.
     },
