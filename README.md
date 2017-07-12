@@ -86,5 +86,5 @@ Or execute the key combination ctrl + shift + B
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-* 2017-07-11   v1.0.2   Further edits of readme.md
+* 2017-07-11   v1.0.3   Further edits of readme.md
 * 2017-07-07   v1.0.0   Initial commits
