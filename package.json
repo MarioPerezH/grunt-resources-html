@@ -1,6 +1,6 @@
 {
   "name": "grunt-resources-html",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Extract the resources from a html file (script-css) and deposit to a destination folder",
   "main": "index.js",
   "scripts": {

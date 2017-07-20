@@ -6,7 +6,8 @@ module.exports = function (grunt) {
     distFolder: 'test/resources-dest',
     grunt_resources_html: {
       options: {
-        verbose: true
+        verbose: true,
+        sort: true
       },
       app: {
         src: ['test/index.html'],

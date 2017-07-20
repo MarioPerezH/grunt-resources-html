@@ -11,6 +11,7 @@ interface IOptions {
     regexScript: string;
     regexCss: string;
     modifer: string;
+    sort: boolean;
 }
 
 interface IFile {
@@ -35,8 +36,11 @@ export class GruntResourceHtml {
             verbose: true,
             regexCss: '<link href="(.*|\n*)" rel(\s*|\n*)',
             regexScript: '<script src="(.*|\n*)">(\s*|\n*)<\/script>',
-            modifer: 'ig'
+            modifer: 'ig',
+            sort : true
         });
+
+        let cont: number = 0;
 
         // custom targets
         (<IFile[]>task.files).forEach(file => {
@@ -48,7 +52,7 @@ export class GruntResourceHtml {
                 let filestring = grunt.file.read(path),
                     srcScripts: string[] = this.getSources(this.options.regexScript, filestring, this.options.modifer),
                     srcCss: string[] = this.getSources(this.options.regexCss, filestring, this.options.modifer),
-                    srcs: string[] = srcScripts.concat(srcCss);
+                    srcs: string[] = srcCss.concat(srcScripts);
 
                 srcs.forEach(src => {
                     if (!this.existsFile(src)) { 
@@ -59,6 +63,11 @@ export class GruntResourceHtml {
                     }
 
                     let name = this.getNameFromPath(src);
+
+                    if (this.options.sort) { 
+                        cont++;
+                        name = `${cont.toString()}_${name}`;
+                    }
 
                     this.copySources(src, file.dest, name);
 

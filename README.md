@@ -30,6 +30,14 @@ grunt.initConfig({
   },
 });
 ```
+
+### Options
+
+#### options.sort
+Type: `Boolean`
+
+Enumerates resources in the order they appear in the html file.
+
 ### Usage Examples
 
 #### Default Options
@@ -54,7 +62,8 @@ In this example, resources are extracted from src to copied to dest.
 grunt.initConfig({
   grunt_resources_html: {
       options: {
-        verbose: false
+        verbose: false,
+        sort: true
       },
       dist: {
         src: ['test/index.html'],
@@ -69,8 +78,8 @@ grunt.initConfig({
 ├── gruntfile.js
 └── test
     └── resources-dest
-        └── bootstrap.min.css
-        └── jquery-1.11.3.min.js
+        └── 1_bootstrap.min.css
+        └── 2_jquery-1.11.3.min.js
 ```
 
 ### Compile Typescript
@@ -86,5 +95,6 @@ Or execute the key combination ctrl + shift + B
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+* 2017-07-20   v1.1.0   New option sort
 * 2017-07-11   v1.0.3   Further edits of readme.md
 * 2017-07-07   v1.0.0   Initial commits
